@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/style.css">
+    <title>Code Quiz</title>
+</head>
+
+<header>
+
+    <div id="highscore-link">
+        <a href="#scoreboard" id="score-page">Highscores</a>
+    </div>
+
+    <div id="timer">
+        <h2></h2>
+    </div>
+
+</header>
+
+<main>
+    <div id="intro" data-state="showing">
+        <h1>Cat Quiz Challenge</h1>
+        <p>Welcome to the Quiz Challenge <br> <br> Game rules: you have 30 seconds to answer all questions. When your answer incorrect, you must continue to find the correct one, if the answer is correct, you can move on to the next question. <br> The faster you complete the quiz the higher your score. If you can't answer all the questions before time out, your score will be 0. <br> <br> Are you ready? Please press Play to get started</p>
+        <button type="button" id="play">PLAY!!!</button>
+    </div>
+
+    <div id="quiz-content" data-state="hidden">
+        <h1 id="questions">Question</h1>
+        <button type="button" class="answers" id="answerA">answer</button><br><br>
+        <button type="button" class="answers" id="answerB">answer</button><br><br>
+        <button type="button" class="answers" id="answerC">answer</button><br><br>
+        <button type="button" class="answers" id="answerD">answer</button><br><br>
+    </div>
+    
+    <div id="scoreForm">
+        <h1>Thank you for playing! Here your score: </h1>
+        <h1 id="final-score"></h1>
+        <form method="post">
+            <label for="name">Enter your name here:</label>
+            <input type="text" id="name" name="names"><br><br>
+            <input type="submit" id="submitBtn" value="Submit">
+        </form>
+    </div>
+    
+    <section id="scoreboard" data-state="hidden">
+        <h1>Highscores</h1>
+        <div id=scoresText>
+            <ul id="highscores"></ul>
+        </div>
+        <button type="button" id="restart">Restart</button>
+        <button type="button" id="clear">Clear</button>
+        
+    </section>
+    
+    <script src="./asset/script.js"></script>
+    
+</main>
+</html>
